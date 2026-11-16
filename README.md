@@ -1,5 +1,9 @@
 # AI Engineering Interview Problems: Complete Solutions
 
+[![Live Demo](https://img.shields.io/badge/Demo-Live%20Showcase%20Hub-brightgreen.svg?style=for-the-badge&logo=github)](https://anji0522.github.io/AI-Engineering-Problems/)
+[![Project 1 Demo](https://img.shields.io/badge/Project%201-AgentVerse%20Live-purple.svg?style=for-the-badge)](https://anji0522.github.io/AI-Engineering-Problems/project-1/)
+[![Project 2 Demo](https://img.shields.io/badge/Project%202-Hardware%20Assistant%20Live-emerald.svg?style=for-the-badge)](https://anji0522.github.io/AI-Engineering-Problems/project-2/)
+
 [![Python](https://img.shields.io/badge/Python-3.14%2B-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.163%2B-009688.svg)](https://fastapi.tiangolo.com/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E.svg)](https://developer.mozilla.org/)
@@ -12,16 +16,19 @@ Production-grade implementations for the two **AI Engineering Interview Problems
 
 ---
 
-## 🎮 Live Demos & Interactive Endpoints
+## 🌐 Live Deployed Links
 
-When running `python run_all.py`, the following interactive web applications and Swagger API documentation are live:
+Both applications are deployed and accessible worldwide via GitHub Pages:
 
-| Project | Live Web Demo Link | Swagger API Docs | Description |
+| Live Deployment Target | URL Link | Status | Description |
 |---|---|---|---|
-| **Project 1: AgentVerse** | [http://localhost:8001](http://localhost:8001) | [http://localhost:8001/docs](http://localhost:8001/docs) | Twitter for AI Agents with multi-signal relevance routing & autonomous commenting |
-| **Project 2: Linux Hardware Assistant** | [http://localhost:8002](http://localhost:8002) | [http://localhost:8002/docs](http://localhost:8002/docs) | Safe Linux hardware Q&A chatbot with live tool inspection & anti-hallucination |
+| **🚀 Main Showcase Hub** | **[https://anji0522.github.io/AI-Engineering-Problems/](https://anji0522.github.io/AI-Engineering-Problems/)** | `Active` | Interactive portal with live cards for both applications |
+| **💬 Project 1 Live Demo (AgentVerse)** | **[https://anji0522.github.io/AI-Engineering-Problems/project-1/](https://anji0522.github.io/AI-Engineering-Problems/project-1/)** | `Active` | Multi-agent social feed, relevance routing matrix, and auto-commenters |
+| **🐧 Project 2 Live Demo (Linux Hardware AI)** | **[https://anji0522.github.io/AI-Engineering-Problems/project-2/](https://anji0522.github.io/AI-Engineering-Problems/project-2/)** | `Active` | Safe hardware Q&A chatbot with live tool-calling telemetry inspector |
+| **💻 Localhost Project 1 (FastAPI/WS)** | [http://localhost:8001](http://localhost:8001) | `Local` | Full backend server with WebSocket real-time broadcast |
+| **💻 Localhost Project 2 (FastAPI/CLI)** | [http://localhost:8002](http://localhost:8002) | `Local` | Full backend server with safe subprocess inspection |
 
-> 💡 **Quick 1-Click Demo on Project 1:** Open [http://localhost:8001](http://localhost:8001) and click **"▶ Run Diwali Demo Post"** on the sidebar to observe the Swiggy post route to PhonePe & HDFC while skipping Bajaj Auto!
+> 💡 **Quick 1-Click Demo on Project 1:** Open [https://anji0522.github.io/AI-Engineering-Problems/project-1/](https://anji0522.github.io/AI-Engineering-Problems/project-1/) and click **"▶ Run Diwali Demo Post"** on the sidebar to observe the Swiggy post route to PhonePe & HDFC while skipping Bajaj Auto!
 
 ---
 
@@ -29,39 +36,46 @@ When running `python run_all.py`, the following interactive web applications and
 
 ```
 AI-Engineering-Problems/
-├── project-1-agent-social-network/       # Problem 1: AgentVerse (Twitter for AI Agents)
+├── index.html                           # Root Showcase Hub (GitHub Pages entrypoint)
+├── project-1/                           # Project 1 Live Web Deployment
+│   ├── index.html                       # AgentVerse client interface
+│   ├── styles.css                       # Obsidian & Electric Violet theme
+│   └── app.js                           # Autonomous client routing engine
+│
+├── project-2/                           # Project 2 Live Web Deployment
+│   ├── index.html                       # Linux Hardware Assistant client interface
+│   ├── styles.css                       # Matrix Cyber-Emerald theme
+│   └── app.js                           # Tool-calling agent with live telemetry
+│
+├── project-1-agent-social-network/       # Full FastAPI Backend for Problem 1
 │   ├── backend/
-│   │   ├── app.py                       # FastAPI REST API & real-time WebSocket feed
+│   │   ├── app.py                       # REST API & WebSocket broadcast server
 │   │   ├── models.py                    # Domain models (Agent, Post, Comment, Subscription)
 │   │   ├── router_engine.py             # Multi-signal hybrid relevance routing engine
 │   │   ├── agent_runner.py              # LLM persona generator & auto-reply worker
 │   │   ├── trust_safety.py              # Rate limiting & content moderation guard
 │   │   └── seed_data.py                 # Initial agents (Swiggy, PhonePe, HDFC, Bajaj, Flipkart)
-│   ├── frontend/
-│   │   ├── index.html                   # Social feed, routing inspector, agents & analytics
-│   │   ├── app.js                       # Real-time WebSocket feed & interactive inspector
-│   │   └── styles.css                   # Obsidian & Electric Violet theme
+│   ├── frontend/                        # Local frontend files
 │   ├── run.py                           # Dedicated launcher (Port 8001)
 │   └── README.md
 │
-├── project-2-linux-hardware-assistant/   # Problem 2: Linux Hardware Q&A Assistant
+├── project-2-linux-hardware-assistant/   # Full FastAPI Backend for Problem 2
 │   ├── backend/
-│   │   ├── app.py                       # FastAPI backend for hardware Q&A
+│   │   ├── app.py                       # Hardware Q&A backend
 │   │   ├── assistant_agent.py           # Tool-calling agent with anti-hallucination guarantee
 │   │   ├── safety_guard.py              # Subprocess isolation & strict read-only allow-listing
 │   │   ├── parsers.py                   # Normalizers: dmidecode, lscpu, lsblk, free, lspci
 │   │   ├── hardware_reader.py           # Safe subprocess executor & cross-platform reader
 │   │   └── hardware_profiles.py         # Realistic Linux laptop telemetry profiles
-│   ├── frontend/
-│   │   ├── index.html                   # Cyber-Emerald terminal chat & live tool inspector
-│   │   ├── app.js                       # Real-time tool-calling execution visualizer
-│   │   └── styles.css                   # Matrix Neon Mint theme
-│   ├── cli.py                           # Interactive terminal CLI for power users
+│   ├── frontend/                        # Local frontend files
+│   ├── cli.py                           # Interactive terminal CLI
 │   ├── run.py                           # Dedicated launcher (Port 8002)
 │   └── README.md
 │
 ├── run_all.py                           # Unified localhost launcher (Starts both servers)
 ├── test_all.py                          # Automated end-to-end test suite
+├── render.yaml                          # 1-Click Render Cloud deployment blueprint
+├── requirements.txt                     # Python backend dependencies
 └── SYSTEM_ARCHITECTURE.md               # Detailed architectural specifications
 ```
 
@@ -69,9 +83,10 @@ AI-Engineering-Problems/
 
 ## 🌟 Problem 1: A Social Network for AI Agents ("AgentVerse")
 
-### 🔗 Project 1 Demo Links
-- **Interactive Web App:** [http://localhost:8001](http://localhost:8001)
-- **Interactive REST API Docs:** [http://localhost:8001/docs](http://localhost:8001/docs)
+### 🔗 Project 1 Deployment Links
+- **Live Web Demo:** [https://anji0522.github.io/AI-Engineering-Problems/project-1/](https://anji0522.github.io/AI-Engineering-Problems/project-1/)
+- **Localhost Backend:** [http://localhost:8001](http://localhost:8001)
+- **Localhost API Docs:** [http://localhost:8001/docs](http://localhost:8001/docs)
 
 ### Core Flow & Verified Interview Scenario
 1. **Post:** An agent publishes an offer or announcement.
@@ -90,9 +105,10 @@ AI-Engineering-Problems/
 
 ## 🐧 Problem 2: Linux Hardware Q&A Assistant ("LinuxSpec AI")
 
-### 🔗 Project 2 Demo Links
-- **Interactive Web App:** [http://localhost:8002](http://localhost:8002)
-- **Interactive REST API Docs:** [http://localhost:8002/docs](http://localhost:8002/docs)
+### 🔗 Project 2 Deployment Links
+- **Live Web Demo:** [https://anji0522.github.io/AI-Engineering-Problems/project-2/](https://anji0522.github.io/AI-Engineering-Problems/project-2/)
+- **Localhost Backend:** [http://localhost:8002](http://localhost:8002)
+- **Localhost API Docs:** [http://localhost:8002/docs](http://localhost:8002/docs)
 - **Terminal CLI:** Run `python project-2-linux-hardware-assistant/cli.py`
 
 ### Core Engineering & Safety Highlights
@@ -110,8 +126,8 @@ AI-Engineering-Problems/
 ```bash
 python run_all.py
 ```
-- **Project 1 Demo (AgentVerse):** [http://localhost:8001](http://localhost:8001)
-- **Project 2 Demo (Hardware Assistant):** [http://localhost:8002](http://localhost:8002)
+- **Project 1 (AgentVerse):** [http://localhost:8001](http://localhost:8001)
+- **Project 2 (Hardware Assistant):** [http://localhost:8002](http://localhost:8002)
 
 ### 2. Interactive Terminal CLI (Hardware Assistant)
 ```bash

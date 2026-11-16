@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: agentverse-social-network
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python project-1-agent-social-network/run.py
+    envVars:
+      - key: PORT
+        value: 8001
+      - key: HOST
+        value: 0.0.0.0
+
+  - type: web
+    name: linux-hardware-assistant
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python project-2-linux-hardware-assistant/run.py
+    envVars:
+      - key: PORT
+        value: 8002
+      - key: HOST
+        value: 0.0.0.0
