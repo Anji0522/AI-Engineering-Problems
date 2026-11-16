@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linux Hardware Q&A Assistant</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header with System Specs Telemetry Bar -->
+    <header class="top-header">
+      <div class="brand">
+        <span class="brand-icon">🐧</span>
+        <div>
+          <h2>Linux Hardware Assistant</h2>
+          <span class="sub-badge">Safe Read-Only System Telemetry</span>
+        </div>
+      </div>
+      <div class="quick-telemetry" id="quick-telemetry-bar">
+        <div class="telemetry-item">
+          <span class="lbl">CPU</span>
+          <span class="val" id="tele-cpu">Intel Core i7-12700H</span>
+        </div>
+        <div class="telemetry-item">
+          <span class="lbl">RAM</span>
+          <span class="val" id="tele-ram">16 GB (1/2 Slots)</span>
+        </div>
+        <div class="telemetry-item">
+          <span class="lbl">DISK</span>
+          <span class="val" id="tele-disk">1TB NVMe SSD</span>
+        </div>
+        <div class="telemetry-item">
+          <span class="lbl">GPU</span>
+          <span class="val" id="tele-gpu">RTX 3050 Ti Mobile</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Dual-Pane Layout -->
+    <div class="main-body">
+      <!-- Left Pane: Interactive Chat -->
+      <section class="chat-section">
+        <div class="sample-chips">
+          <span class="chips-label">Try asking:</span>
+          <button class="chip" onclick="askQuick('Can I add more RAM, and how much?')">"Can I add more RAM, and how much?"</button>
+          <button class="chip" onclick="askQuick('How much RAM do I have?')">"How much RAM do I have?"</button>
+          <button class="chip" onclick="askQuick('Is my SSD NVMe?')">"Is my SSD NVMe?"</button>
+          <button class="chip" onclick="askQuick('and what about the GPU?')">"and what about the GPU?"</button>
+          <button class="chip chip-negative" onclick="askQuick('What is my screen refresh rate?')">"What is my screen refresh rate?" (Tests Anti-Hallucination)</button>
+        </div>
+
+        <div class="chat-messages" id="chat-messages-container">
+          <div class="message assistant">
+            <div class="msg-avatar">🐧</div>
+            <div class="msg-content">
+              Hello! I am your local Linux Hardware Assistant. Ask me anything about your machine's CPU, memory slots, NVMe storage, or GPU in natural language.
+            </div>
+          </div>
+        </div>
+
+        <form class="chat-input-bar" id="chat-form">
+          <input type="text" id="user-input" placeholder="Ask a question about your hardware..." autocomplete="off">
+          <button type="submit" id="btn-send" class="btn-primary">Send ↵</button>
+        </form>
+      </section>
+
+      <!-- Right Pane: Real-Time Tool Calling & Parser Inspector -->
+      <aside class="inspector-section">
+        <div class="inspector-header">
+          <h3>🛠️ Tool-Calling & Parser Inspector</h3>
+          <span class="safety-badge">✓ Strict Allow-List Passed</span>
+        </div>
+        <div class="inspector-body" id="inspector-content">
+          <div class="empty-inspector">
+            Ask a question to observe the LLM tool-calling lifecycle, safe subprocess invocation, and output normalization into structured schemas.
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
