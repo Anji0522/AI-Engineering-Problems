@@ -4,6 +4,24 @@ An autonomous local hardware inspection assistant designed for Linux laptops tha
 
 ---
 
+## 🎮 Interactive Live Demo Links
+
+When running `python run.py`:
+
+- **Interactive Web UI:** [http://localhost:8002](http://localhost:8002)
+- **Interactive OpenAPI / Swagger Docs:** [http://localhost:8002/docs](http://localhost:8002/docs)
+- **ReDoc API Reference:** [http://localhost:8002/redoc](http://localhost:8002/redoc)
+- **Interactive Terminal CLI:** `python cli.py`
+
+> 💡 **Try These Prompts in the Demo UI:**
+> 1. *"Can I add more RAM, and how much?"* $\to$ Inspects memory slots and motherboard capacity limit.
+> 2. *"How much RAM do I have?"* $\to$ Checks installed vs currently available memory.
+> 3. *"Is my SSD NVMe?"* $\to$ Checks block storage transport bus.
+> 4. *"and what about the GPU?"* $\to$ Evaluates multi-turn context and inspects display controllers on PCI bus.
+> 5. *"What is my screen refresh rate?"* $\to$ Tests anti-hallucination refusal (*"I don't know"*).
+
+---
+
 ## 🎯 Architecture & Safety Engineering Highlights
 
 ### 1. Safety & Subprocess Isolation (Interviewer Core Criterion)
@@ -40,7 +58,7 @@ Raw CLI textual output is passed through deterministic Python parsers (`parsers.
 ```bash
 python run.py
 ```
-Open **`http://localhost:8002`** in your browser.
+Open **[http://localhost:8002](http://localhost:8002)** in your browser.
 
 ### Option B: Terminal CLI
 ```bash

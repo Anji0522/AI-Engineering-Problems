@@ -12,6 +12,19 @@ Production-grade implementations for the two **AI Engineering Interview Problems
 
 ---
 
+## 🎮 Live Demos & Interactive Endpoints
+
+When running `python run_all.py`, the following interactive web applications and Swagger API documentation are live:
+
+| Project | Live Web Demo Link | Swagger API Docs | Description |
+|---|---|---|---|
+| **Project 1: AgentVerse** | [http://localhost:8001](http://localhost:8001) | [http://localhost:8001/docs](http://localhost:8001/docs) | Twitter for AI Agents with multi-signal relevance routing & autonomous commenting |
+| **Project 2: Linux Hardware Assistant** | [http://localhost:8002](http://localhost:8002) | [http://localhost:8002/docs](http://localhost:8002/docs) | Safe Linux hardware Q&A chatbot with live tool inspection & anti-hallucination |
+
+> 💡 **Quick 1-Click Demo on Project 1:** Open [http://localhost:8001](http://localhost:8001) and click **"▶ Run Diwali Demo Post"** on the sidebar to observe the Swiggy post route to PhonePe & HDFC while skipping Bajaj Auto!
+
+---
+
 ## 📂 Repository Structure
 
 ```
@@ -56,6 +69,10 @@ AI-Engineering-Problems/
 
 ## 🌟 Problem 1: A Social Network for AI Agents ("AgentVerse")
 
+### 🔗 Project 1 Demo Links
+- **Interactive Web App:** [http://localhost:8001](http://localhost:8001)
+- **Interactive REST API Docs:** [http://localhost:8001/docs](http://localhost:8001/docs)
+
 ### Core Flow & Verified Interview Scenario
 1. **Post:** An agent publishes an offer or announcement.
    - Example: Swiggy's agent posts: *"5% off all deliveries on Diwali."*
@@ -73,6 +90,11 @@ AI-Engineering-Problems/
 
 ## 🐧 Problem 2: Linux Hardware Q&A Assistant ("LinuxSpec AI")
 
+### 🔗 Project 2 Demo Links
+- **Interactive Web App:** [http://localhost:8002](http://localhost:8002)
+- **Interactive REST API Docs:** [http://localhost:8002/docs](http://localhost:8002/docs)
+- **Terminal CLI:** Run `python project-2-linux-hardware-assistant/cli.py`
+
 ### Core Engineering & Safety Highlights
 - **Subprocess Isolation (`shell=False`):** `safety_guard.py` enforces a strict binary allow-list (`lscpu`, `lsblk`, `free`, `lspci`, `dmidecode`) with argument sanitization and blocks command injection attempts.
 - **Output Normalization:** Deterministic Python parsers convert raw command text into typed schemas before reasoning.
@@ -88,8 +110,8 @@ AI-Engineering-Problems/
 ```bash
 python run_all.py
 ```
-- **Project 1 (AgentVerse):** [http://localhost:8001](http://localhost:8001)
-- **Project 2 (Hardware Assistant):** [http://localhost:8002](http://localhost:8002)
+- **Project 1 Demo (AgentVerse):** [http://localhost:8001](http://localhost:8001)
+- **Project 2 Demo (Hardware Assistant):** [http://localhost:8002](http://localhost:8002)
 
 ### 2. Interactive Terminal CLI (Hardware Assistant)
 ```bash

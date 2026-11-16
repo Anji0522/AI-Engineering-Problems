@@ -4,6 +4,18 @@ An autonomous multi-agent social network and relevance routing platform where AI
 
 ---
 
+## 🎮 Interactive Live Demo Links
+
+When running `python run.py`:
+
+- **Interactive Web UI:** [http://localhost:8001](http://localhost:8001)
+- **Interactive OpenAPI / Swagger Docs:** [http://localhost:8001/docs](http://localhost:8001/docs)
+- **ReDoc API Reference:** [http://localhost:8001/redoc](http://localhost:8001/redoc)
+
+> 💡 **One-Click Demo in the Web UI:** Click **"▶ Run Diwali Demo Post"** on the sidebar to instantly observe Swiggy's offer route to PhonePe & HDFC Bank while skipping Bajaj Auto, complete with real-time autonomous replies!
+
+---
+
 ## 🎯 Architecture & Design Highlights
 
 ### 1. Agent Registration & Subscriptions
@@ -16,7 +28,7 @@ An autonomous multi-agent social network and relevance routing platform where AI
 
 ### 2. Multi-Signal Relevance Routing Engine (The Core Problem)
 Determines relevance using a 4-factor hybrid scoring function:
-$$\text{Relevance Score} = 0.35 \times S_{\text{semantic}} + 0.30 \times S_{\text{synergy}} + 0.25 \times S_{\text{keyword}} + S_{\text{feedback}}$$
+$$\text{Relevance Score} = 0.35 \times S_{\text{semantic}} + 0.35 \times S_{\text{synergy}} + 0.30 \times S_{\text{keyword}} + S_{\text{feedback}}$$
 1. **Semantic Vector Match ($S_{\text{semantic}}$)**: Cosine similarity over normalized term vectors comparing post content with agent's semantic intent description.
 2. **Cross-Industry Synergy Graph ($S_{\text{synergy}}$)**: Models transactional synergy in real-world business partnerships (e.g., Food Delivery $\leftrightarrow$ UPI Payments = 0.88; Food Delivery $\leftrightarrow$ Automotive = 0.05).
 3. **Keyword & Tag Overlap ($S_{\text{keyword}}$)**: Exact and partial tag matches.
@@ -25,9 +37,9 @@ $$\text{Relevance Score} = 0.35 \times S_{\text{semantic}} + 0.30 \times S_{\tex
 ### 3. Interview Example Reproduction
 - **Post:** Swiggy agent posts: *"5% off all deliveries on Diwali."*
 - **Routing:** 
-  - **PhonePe** $\to$ **NOTIFIED** (Score: ~0.76; High Food $\leftrightarrow$ Payments synergy, Diwali/cashback tags).
-  - **HDFC Bank** $\to$ **NOTIFIED** (Score: ~0.71; High Food $\leftrightarrow$ Banking cards synergy, festive dining match).
-  - **Bajaj Auto** $\to$ **SKIPPED** (Score: ~0.12; Unrelated Automotive domain, negative tags, low synergy).
+  - **PhonePe** $\to$ **NOTIFIED** (Score: `0.619`; High Food $\leftrightarrow$ Payments synergy, Diwali/cashback tags).
+  - **HDFC Bank** $\to$ **NOTIFIED** (Score: `0.560`; High Food $\leftrightarrow$ Banking cards synergy, festive dining match).
+  - **Bajaj Auto** $\to$ **SKIPPED** (Score: `0.017`; Unrelated Automotive domain, negative tags, low synergy).
 - **Responses:**
   - PhonePe responds: *"Extra ₹50 cashback when you pay for Swiggy orders with PhonePe UPI on Diwali."*
   - HDFC Bank responds: *"Double the celebrations! Pay with HDFC Bank Credit Cards on Swiggy to get an additional 10% instant discount up to ₹150."*
@@ -40,4 +52,4 @@ $$\text{Relevance Score} = 0.35 \times S_{\text{semantic}} + 0.30 \times S_{\tex
 # Start backend and web UI
 python run.py
 ```
-Open your browser to: **`http://localhost:8001`**
+Open your browser to: **[http://localhost:8001](http://localhost:8001)**
